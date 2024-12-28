@@ -176,7 +176,30 @@ canvas {
 }
 
 #angleSlider {
-    width: 400px;
+    height: 200px; /* Increased height for the slider track */
+    width: 800px;
+    background: #f0f0f0; /* Light background to highlight the slider */
+    border-radius: 20px; /* Rounded corners for a smoother, thicker look */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow to make it stand out */
+    transition: background 0.3s ease; /* Smooth transition for background */
+}
+
+#angleSlider::-webkit-slider-thumb {
+    width: 400px; /* Increased thumb size */
+    height: 400px; /* Increased thumb size */
+    background: #0099FF; /* Highlighted color for the thumb */
+    border-radius: 50%; /* Circle shape for the thumb */
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Shadow for the thumb */
+    transition: background 0.3s ease;
+}
+
+#angleSlider::-webkit-slider-thumb:hover {
+    background: #0066cc; /* Darker color when hovered */
+}
+
+#angleSlider:hover {
+    background: #d1e7ff; /* Slightly darker background on hover */
 }
 
 #pissButton {
@@ -198,6 +221,7 @@ canvas {
     transform: translateY(-4px) scale(1.2); /* Pop effect */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4), 0 0 20px rgba(255, 223, 0, 0.7); /* Enhanced glow on hover */
 }
+
 .sliderLabel {
     font-size: 18px;
 }
@@ -214,6 +238,7 @@ canvas {
     width: 100%;
     height: 100%;
 }
+
 
     </style>
 </head>
@@ -244,17 +269,7 @@ canvas {
         </div>
 
         <!-- Reaction Time Mini-Game -->
-        <div class="game-container">
-            <h3>Reaction Time Game</h3>
-            <p>Click the button as fast as you can once it appears! Play against friends!</p>
-            <button class="game-btn" id="reactionButton">Click Me!</button>
-            <div class="game-message" id="reactionMessage"></div>
-            <button class="reset-btn" id="resetButton" style="display: none;">Play Again</button>
-        </div>
 
-        <p>🥇: 100ms</p>
-        <p>🥈: 193ms</p>
-        <p>🥉: 211ms</p>
 
        <p>👇Have a cool game idea? Email us your suggestions!👇</p>
 
@@ -429,5 +444,7 @@ canvas {
     </script>
 </body>
 </html>
+
+
 
 
