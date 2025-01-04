@@ -491,6 +491,18 @@ document.getElementById('playSound').addEventListener('click', () => {
         tempInput.value = emailText;
         tempInput.select();
         document.execCommand("copy");
+			let images = ['https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUFL3op49XD6cjEBQWT7ixJAIkVByBSN_TsBwj4rtTVTzJ_KFfSyyLFgcVrrvormJGsX0&usqp=CAU', 'https://i.pinimg.com/236x/23/5c/79/235c79fe181797b5c8c7f33ee1eb4598.jpg']; // List your images here
+    let currentImageIndex = 0;
+
+    function changeImage() {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        document.getElementById('gmailBtn').style.backgroundImage = `url(${images[currentImageIndex]})`;
+    }
+
+    setInterval(() => {
+        changeImage();
+        setTimeout(() => changeImage(), 200); // Reset after 0.2 seconds
+    }, 2000); // Every 2 seconds
         
         // Remove the temporary input
         document.body.removeChild(tempInput);
