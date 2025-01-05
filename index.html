@@ -325,8 +325,7 @@
         <a href="https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSMSqcwLFLwbZfVpQTfzblFrwvWgKllHHlLrFQFZcDzRbGnKQctBmbTrnWmsRTNFqwPXpRJF">
             <button class="btn">Gmail!</button>
         </a>
-	    <p>3d42c581de81b060b158e003e0cea8b8eea2c94e69529417778ba1fde84679cc</p>
-
+	    
         <h2>Picture contest!</h2>
 
         <div class="game-container">
@@ -355,21 +354,9 @@
         let angle = 45;
         let startTime, endTime;
 
-       // Preload audio files
-const audio69 = new Audio('moan-made-with-voicemod-mp3.mp3');
-const audioDefault = new Audio('water-droplet-drip.mp3');
-const hitSound = new Audio('sounds/yippee-tbh%20(1).mp3');
-
-// Preload them to avoid delays
-audio69.preload = 'auto';
-audioDefault.preload = 'auto';
-hitSound.preload = 'auto';
-
-// Play on event
-document.getElementById('playSound').addEventListener('click', () => {
-    hitSound.play();
-});
-
+        const audio69 = new Audio('moan-made-with-voicemod-mp3.mp3');
+        const audioDefault = new Audio('water-droplet-drip.mp3');
+        const hitSound = new Audio('sounds/yippee-tbh%20(1).mp3');
 
         function drawBall() {
             ctx.beginPath();
